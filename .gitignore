@@ -1,0 +1,37 @@
+# Secrets / environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# uv
+uv.lock
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Scripts
+baselines/
+evaluation/
+
+# Generated analysis output
+results/
+log_analysis_*.json
+tad_spike_*.json
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

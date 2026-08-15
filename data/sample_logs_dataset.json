@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "name": "Malicious Activity Detection",
+    "custom_query": "Exactly ONE of the following five logs is evidence of malicious activity. Identify it by its log_id, then explain why it is malicious in one sentence. IMPORTANT: in your explanation, do NOT reuse the exact keywords that appear in the log (such as process names, event codes, actions, or field values); instead paraphrase them using synonyms or descriptive equivalents."
+  },
+  "windows": [
+    {
+      "window_id": 1,
+      "scenario_id": "persistence",
+      "description": "Five configuration logs; target = new Run-key registry autostart pointing at a temp-dir binary (malicious log at position 5).",
+      "start": "2025-01-01T00:01:00Z",
+      "end": "2025-01-01T00:05:00Z",
+      "reference_event_count": 1,
+      "reference_events": [
+        {
+          "log_id": "7c3f0a9e2b514d68-a0c7e13fb046-2e90a1c7d583-f61b0a48",
+          "timestamp": "2025-01-01T00:05:00Z",
+          "Event": "4657",
+          "Act": "RegSet",
+          "User": "jdoe",
+          "SrcIP": "10.0.0.55",
+          "DstIP": "10.0.0.55",
+          "Proc": "reg.exe HKCU\\...\\Run -> %TEMP%\\svc.exe",
+          "Status": "OK",
+          "Time": "00:05:00"
+        }
+      ],
+      "extracted_log_count": 4,
+      "extracted_logs": [
+        {
+          "log_id": "2e9a4c7f1b038d65-a0e2c9d14a2c-3a58e18f520e-1f05a094",
+          "timestamp": "2025-01-01T00:01:00Z",
+          "Event": "4688",
+          "Act": "Start",
+          "User": "jdoe",
+          "SrcIP": "10.0.0.55",
+          "DstIP": "10.0.0.55",
+          "Proc": "teams.exe",
+          "Status": "OK",
+          "Time": "00:01:00"
+        },
+        {
+          "log_id": "8b1d6e3a0c94f275-90a1e4d3c12b-f3461a5068f3-96ffa5bd",
+          "timestamp": "2025-01-01T00:02:00Z",
+          "Event": "4657",
+          "Act": "RegSet",
+          "User": "SYSTEM",
+          "SrcIP": "10.0.0.55",
+          "DstIP": "10.0.0.55",
+          "Proc": "reg.exe HKLM\\...\\WindowsUpdate",
+          "Status": "OK",
+          "Time": "00:02:00"
+        },
+        {
+          "log_id": "d0c4a7e91b526f38-a0c1e7b433d0-6a67abcaaf0e-9f73f06b",
+          "timestamp": "2025-01-01T00:03:00Z",
+          "Event": "4624",
+          "Act": "Logon",
+          "User": "jdoe",
+          "SrcIP": "10.0.0.55",
+          "DstIP": "10.0.0.55",
+          "Proc": "explorer.exe",
+          "Status": "OK",
+          "Time": "00:03:00"
+        },
+        {
+          "log_id": "3a7e1c9d4b280f65-a0e3c2b18992-72e71a893b59-acbd5a02",
+          "timestamp": "2025-01-01T00:04:00Z",
+          "Event": "4688",
+          "Act": "Start",
+          "User": "jdoe",
+          "SrcIP": "10.0.0.55",
+          "DstIP": "10.0.0.55",
+          "Proc": "code.exe",
+          "Status": "OK",
+          "Time": "00:04:00"
+        }
+      ]
+    }
+  ]
+}
