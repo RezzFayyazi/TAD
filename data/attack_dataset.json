@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "license": "Apache-2.0",
+    "license": "GNU General Public License v3.0",
     "total_windows": 10,
     "total_reference_events": 20,
     "total_extracted_logs": 587
