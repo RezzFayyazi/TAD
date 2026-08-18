@@ -1,7 +1,7 @@
 # Topological Attribution Distance (TAD)
 
  **Topological Attribution Distance (TAD)** is an explainable metric, inspired by Topology, to characterize and capture the global geometric shape of an LLM output and its changes against its retrieved logs. TAD is powered by segment-level ablation attribution to
-investigate incident logs of an actual cyberattack. This can provide an explainable and trustworthy tracing based on each LLM's hidden state to understand how geometrically different retrieved logs influence the model generation, and provide evidence verification in cybersecurity and Agentic-AI workflows. [[Paper]()] 
+investigate incident logs of an actual cyberattack. This can provide an explainable and trustworthy tracing based on each LLM's hidden state to understand how geometrically different retrieved logs influence the model generation, and provide evidence verification in cybersecurity and Agentic-AI workflows. [[Paper](https://arxiv.org/pdf/2608.16775)] 
 
 ![TAD methodology](images/TAD_methodology.png)
 
